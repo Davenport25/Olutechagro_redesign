@@ -51,7 +51,7 @@ a { color: inherit; text-decoration: none; }
 .hero::before { content: ""; position: absolute; inset: -30% -15% auto auto; width: 720px; height: 720px; background: radial-gradient(circle, rgba(216, 168, 75, .28), transparent 66%); pointer-events: none; }
 .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr); align-items: center; gap: 4rem; }
 .hero-grid.compact { gap: 3rem; }
-.eyebrow { color: var(--green); text-transform: uppercase; letter-spacing: .18em; font-weight: 900; font-size: .78rem; margin-bottom: .8rem; }
+.eyebrow { color: var(--green); text-transform: uppercase; letter-spacing: .18em; font-weight: 900; font-size: .89rem;  font-style: italic; margin-bottom: .8rem; }
 h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -.055em; }
 h1 { font-size: clamp(3rem, 7vw, 6.4rem); max-width: 790px; }
 h2 { font-size: clamp(2rem, 4vw, 4rem); }
@@ -95,7 +95,7 @@ h4 { font-size: 1.1rem; }
 .mini-icon { width: 42px; height: 42px; border-radius: 999px; display: grid; place-items: center; background: rgba(255,255,255,.14); color: #f1cf85; margin-bottom: 1rem; }
 
 .values-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: .9rem; }
-.value-card { min-height: 180px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 34px rgba(19,35,27,.05); }
+.value-card { min-height: 100px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 34px rgba(19,35,27,.05); }
 .value-card span { color: var(--gold); font-weight: 900; }
 .value-card p { font-weight: 800; color: var(--ink); }
 
@@ -167,4 +167,234 @@ input:focus, textarea:focus { outline: none; border-color: rgba(30,95,63,.45); b
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+
+/* ===== Professional refinements: Mayana-inspired premium polish ===== */
+.logo-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.42rem;
+  letter-spacing: -0.055em;
+  color: var(--green-2);
+  line-height: 1;
+}
+.logo:hover .logo-text { color: var(--green); }
+.logo-mark {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+}
+.hero-home .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  width: fit-content;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1rem, 1.1vw, 1.22rem);
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: .055em;
+  text-transform: none;
+  color: var(--green-2);
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(30, 95, 63, .16);
+  border-radius: 999px;
+  padding: .65rem 1rem;
+  box-shadow: 0 14px 35px rgba(19, 35, 27, .08);
+}
+.hero-home .hero-eyebrow::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(216, 168, 75, .15);
+}
+
+.intro-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(216, 168, 75, .24), transparent 28%),
+    linear-gradient(180deg, #fffaf0 0%, var(--cream) 56%, #fff 100%);
+  overflow: hidden;
+}
+.intro-section::before {
+  content: "";
+  position: absolute;
+  inset: 2rem max(20px, calc((100vw - 1120px) / 2)) auto;
+  height: calc(100% - 4rem);
+  border: 1px solid rgba(30, 95, 63, .12);
+  border-radius: 48px;
+  pointer-events: none;
+}
+.intro-section .split-grid {
+  position: relative;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(30, 95, 63, .12);
+  border-radius: 42px;
+  padding: clamp(1.35rem, 4vw, 3rem);
+  box-shadow: 0 28px 90px rgba(19, 35, 27, .09);
+  backdrop-filter: blur(12px);
+}
+.intro-section .section-heading h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  letter-spacing: -.06em;
+  color: var(--green-2);
+}
+.intro-section .section-copy {
+  border-left: 3px solid var(--gold);
+  padding-left: clamp(1rem, 2vw, 1.45rem);
+}
+.intro-section .section-copy p {
+  font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+  color: #304238;
+}
+.about-signature {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.1rem;
+  margin-bottom: 1.35rem;
+}
+.signature-item {
+  background: var(--green-2);
+  color: #fff;
+  border-radius: 24px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 18px 45px rgba(15, 61, 42, .16);
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.signature-item strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1;
+}
+.signature-item span {
+  color: rgba(255, 255, 255, .72);
+  font-weight: 700;
+  margin-top: .45rem;
+}
+.intro-section .feature-grid {
+  position: relative;
+  margin-top: 1.25rem;
+}
+.intro-section .feature-card {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, .9);
+}
+.intro-section .feature-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  color: var(--green-2);
+  letter-spacing: -.04em;
+}
+.section-tinted {
+  background:
+    linear-gradient(135deg, rgba(15, 61, 42, .98), rgba(19, 35, 27, .98)),
+    url('https://c4.wallpaperflare.com/wallpaper/9/904/959/field-nature-land-wheat-wallpaper-preview.jpg') center/cover;
+}
+.section-tinted .about-panel {
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 42px;
+  padding: clamp(1.35rem, 4vw, 2.6rem);
+  background: rgba(255, 255, 255, .065);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .16);
+}
+.section-tinted h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  letter-spacing: -.055em;
+}
+
+.contact-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(216, 168, 75, .22), transparent 30%),
+    linear-gradient(180deg, #fff 0%, var(--cream-2) 100%);
+}
+.contact-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(30,95,63,.22), transparent);
+}
+.contact-copy h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  color: var(--green-2);
+  letter-spacing: -.06em;
+}
+.contact-card {
+  border-radius: 32px;
+  border: 1px solid rgba(30, 95, 63, .14);
+  box-shadow: 0 24px 70px rgba(19, 35, 27, .10);
+}
+.contact-details {
+  background: var(--green-2);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.contact-details::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -90px;
+  top: -80px;
+  background: rgba(216, 168, 75, .23);
+  border-radius: 999px;
+}
+.contact-details > * { position: relative; z-index: 1; }
+.contact-details h3,
+.contact-form h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+.contact-details .contact-info li { color: rgba(255,255,255,.82); }
+.contact-details .contact-info span { color: #f1cf85; }
+.contact-details a { color: #fff; }
+.contact-label {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .76rem;
+  font-weight: 900;
+  margin-bottom: .4rem;
+}
+.contact-form {
+  background: rgba(255, 255, 255, .92);
+  padding: clamp(1.35rem, 3vw, 2rem);
+}
+.contact-form .btn { width: 100%; margin-top: 1rem; }
+.social-links a {
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.social-links a:hover { background: rgba(216,168,75,.24); transform: translateY(-2px); }
+input, textarea { background: #fff; }
+
+@media (max-width: 760px) {
+  .logo-text { font-size: 1.22rem; }
+  .hero-home .hero-eyebrow { font-size: .98rem; letter-spacing: .02em; }
+  .intro-section::before { inset: 1rem 14px; border-radius: 32px; }
+  .intro-section .split-grid { border-radius: 30px; }
+  .intro-section .section-copy { border-left: 0; border-top: 3px solid var(--gold); padding-left: 0; padding-top: 1rem; }
+  .about-signature { grid-template-columns: 1fr; }
+  .section-tinted .about-panel { border-radius: 30px; }
 }
